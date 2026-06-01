@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Anime Verse</title>
+<title>Ryomen Sukuna - Jujutsu Kaisen</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
@@ -23,6 +23,10 @@ font-family:'Poppins',sans-serif;
 --red:#d62828;
 --white:#ffffff;
 --gray:#b5b5b5;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -229,8 +233,65 @@ font-size:1.5rem;
 font-weight:bold;
 }
 
-/* FOOTER */
 
+/* GALLERY */
+
+.gallery{
+padding:80px 0;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+transition:.3s;
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+cursor:pointer;
+}
+
+/* ENDING */
+
+.ending{
+padding:80px 0;
+}
+
+.ending-box{
+background:linear-gradient(135deg,#1a1a1a,#252525);
+border-radius:25px;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+padding:40px;
+gap:30px;
+}
+
+.ending-box img{
+width:100%;
+border-radius:20px;
+}
+
+.ending-info h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.ending-info p{
+color:var(--gray);
+margin-bottom:15px;
+}
+
+/* FOOTER */
 footer{
 padding:40px 0;
 text-align:center;
@@ -242,13 +303,18 @@ color:var(--gray);
 @media(max-width:900px){
 
 .hero,
-.feature-box{
+.feature-box,
+.ending-box{
 grid-template-columns:1fr;
 text-align:center;
 }
 
 .hero-text h1{
 font-size:3rem;
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
 }
 
 .cards{
@@ -268,20 +334,20 @@ margin:auto;
 <div class="container">
 <nav>
 
-<div class="logo">ANIME VERSE</div>
+<div class="logo">Jujutsu Kaisen</div>
 
 <ul>
-<li><a href="#">Início</a></li>
-<li><a href="#">Animes</a></li>
-<li><a href="#">Mangás</a></li>
-<li><a href="#">Comunidade</a></li>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#animes">Personagens</a></li>
+<li><a href="#mangas">Expansão de Domínio</a></li>
+<li><a href="#batalha">A Ultima Batalha</a></li>
 </ul>
 
 </nav>
 </div>
 </header>
 
-<section class="hero container">
+<section id="inicio" class="hero container">
 
 <div class="hero-text">
 <h1>RYOMEN <span>SUKUNA</span></h1>
@@ -291,14 +357,14 @@ margin:auto;
 O Rei das Maldições é considerado uma das entidades mais poderosas do universo de Jujutsu Kaisen.
 </p>
 
-<a href="#" class="btn">Explore Agora</a>
+<a href="#animes" class="btn">Explore Agora</a>
 </div>
 
 <img src="img/s5.jpeg" alt="Sukuna">
 
 </section>
 
-<section class="popular container">
+<section id="animes" class="popular container">
 
 <h2 class="section-title">Personagens Populares</h2>
 
@@ -332,7 +398,7 @@ O Rei das Maldições é considerado uma das entidades mais poderosas do univers
 
 </section>
 
-<section class="featured container">
+<section id="mangas" class="featured container">
 
 <div class="feature-box">
 
@@ -356,7 +422,50 @@ A Expansão de Domínio de Sukuna é uma das técnicas mais destrutivas de Jujut
 
 </section>
 
-<footer>
+<section class="gallery container">
+
+<h2 class="section-title">Galeria de fotos</h2>
+
+<div class="gallery-grid">
+
+<img src="img/su1.jpg" alt="Yuji Itadori">
+<img src="img/go1.jpg" alt="Gojo Satoru">
+<img src="img/yu2.jpg" alt="Sukuna">
+<img src="img/su2.jpg" alt="Sukuna">
+<img src="img/go2.jpg" alt="Malevolent Shrine">
+<img src="img/yu1.jpg" alt="Sukuna">
+
+</div>
+
+</section>
+
+<section id="batalha" class="ending container">
+
+<h2 class="section-title">O Desfecho da Grande Batalha</h2>
+
+<div class="ending-box">
+
+<img src="img/go-jo.jpg" alt="Batalha entre Sukuna e Gojo">
+
+<div class="ending-info">
+
+<h2>O Fim do Mais Forte</h2>
+
+<p>
+O confronto entre Ryomen Sukuna e Satoru Gojo marcou um dos momentos mais impactantes de Jujutsu Kaisen.
+</p>
+
+<p>
+Após uma batalha intensa, Sukuna encontrou uma forma de superar o Infinito e derrotar aquele que era considerado o feiticeiro mais poderoso da era moderna.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="comunidade">
 
 <p>Projeto Acadêmico - Desenvolvimento Web Front-End</p>
 
